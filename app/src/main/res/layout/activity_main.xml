@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.machinelearning.guptas.imagetextdetector.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/serverConnectionLayout"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <EditText
+        android:id="@+id/IP_address"
+        android:layout_weight="3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textUri"
+        />
+    <EditText
+        android:id="@+id/Port_address"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/IP_address"
+        android:inputType="number"
+        />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/connected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/socketConnect"
+        android:layout_alignStart="@+id/serverConnectionLayout"
+        android:layout_marginBottom="13dp"
+        android:layout_marginStart="26dp"
+        android:text=""
+        android:visibility="gone"/>
+    <Button
+        android:id="@+id/socketConnect"
+        android:layout_margin="10dp"
+        android:layout_alignParentRight="true"
+        android:text="Connect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/serverConnectionLayout"/>
+
+    <TextView
+        android:id="@+id/path"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_below="@+id/socketConnect"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/filepicker"
+        android:text="Pick Image"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/path"
+        />
+    <Button
+        android:id="@+id/captureImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click a Pic"
+        android:layout_below="@+id/filepicker"
+        android:layout_centerInParent="true"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/result"
+        android:layout_below="@+id/imagelayout"/>
+<ScrollView
+    android:id="@+id/imagelayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/captureImage">
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/bg_clickable" />
+</ScrollView>
+
+
+</RelativeLayout>
