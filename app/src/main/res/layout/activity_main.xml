@@ -67,18 +67,19 @@
         android:layout_centerInParent="true"
         android:layout_below="@+id/path"
         />
-    <Button
-        android:id="@+id/captureImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Click a Pic"
-        android:layout_below="@+id/filepicker"
-        android:layout_centerInParent="true"
-        />
+    <!--<Button-->
+        <!--android:id="@+id/captureImage"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Click a Pic"-->
+        <!--android:layout_below="@+id/filepicker"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--/>-->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone"
+        android:layout_centerHorizontal="true"
         android:id="@+id/result"
         android:layout_below="@+id/imagelayout"/>
 <ScrollView
@@ -89,8 +90,7 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
         app:srcCompat="@drawable/bg_clickable" />
 </ScrollView>
 
